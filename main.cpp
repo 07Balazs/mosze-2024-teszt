@@ -4,24 +4,25 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[N_ELEMENTS]; // hiányzik a _
-    std::cout << "1-100 ertekek duplazasa"<<std::endl; // '' helyett "" kell és hiányzik a ;
-    for (int i = 0; i < N_ELEMENTS; i++) // hiányos ciklusfelvétel
+    int *b = new int[N_ELEMENTS]; // hiï¿½nyzik a _
+    std::cout << "1-100 ertekek duplazasa"<<std::endl; // '' helyett "" kell ï¿½s hiï¿½nyzik a ;
+    for (int i = 0; i < N_ELEMENTS; i++) // hiï¿½nyos ciklusfelvï¿½tel
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i<N_ELEMENTS; i++) // hibás ciklusfelvétel
+    for (int i = 0; i<N_ELEMENTS; i++) // hibï¿½s ciklusfelvï¿½tel
     {
-        std::cout << "Ertek:"<<b[i]<<std::endl; // hiányzi ka ; a sor végérõl, nem írja ki az értéket
+        std::cout << "Ertek:"<<b[i]<<std::endl; // hiï¿½nyzi ka ; a sor vï¿½gï¿½rï¿½l, nem ï¿½rja ki az ï¿½rtï¿½ket
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    double atlag=0; // double-nek kellene lennie hogy tizedes számot kapjunk az átlagnál
+    double atlag=0; // double-nek kellene lennie hogy tizedes szï¿½mot kapjunk az ï¿½tlagnï¿½l
     for (int i = 0; i < N_ELEMENTS, i++) // , helyett ;
     {
-        atlag += b[i]; // hiányzik a ;
+        atlag += b[i]; // hiï¿½nyzik a ;
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
     delete[] b;
+    std::cout << "Az Ã©let nem egy habostorta!" << std::endl;
     return 0;
 }
